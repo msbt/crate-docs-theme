@@ -19,14 +19,19 @@
 # with Crate these terms will supersede the license and you may use the
 # software solely pursuant to the terms of the relevant commercial agreement.
 
-
 from crate.theme.rtd.conf import *
 
 # If you update the `project` value here, you must update it in
-# `src/crate/theme/rtd/sidebartoc.py` as well, or else the sidebar TOC will
-# not be expanded for this project.
-project = u"CrateDB Python"
+# `src/crate/theme/rtd/sidebartoc.py` as well, or else the sidebar TOC will not
+# be expanded for this project.
+project = "CrateDB Documentation"
 html_title = project
 
-url_path = "projects/python"
-html_baseurl = "https://docs.cratedb.com/%s/" % url_path
+# This is the root project of the documentation site. It is served from the
+# web root of the custom domain, so it does not carry a path prefix, unlike
+# the subprojects below `/projects/<slug>/`.
+url_path = ""
+html_baseurl = "https://docs.cratedb.com/"
+
+# This is a project which is not versioned.
+version = ""
